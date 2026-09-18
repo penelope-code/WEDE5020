@@ -1,0 +1,50 @@
+/* Sweet Crumbs Bakery - Part 2 CSS */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body, h1, h2, h3, h4, p, ul, ol, form { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+button, input, select, textarea { font: inherit; }
+:root { --cream:#fff8ef; --brown:#5b3426; --dark:#342019; --pink:#d98282; --light-pink:#f7dede; --gold:#d6a354; --white:#fff; --border:#ead5c3; --shadow:0 .5rem 1.2rem rgba(91,52,38,.12); }
+body { font-family:Arial,Helvetica,sans-serif; font-size:1rem; line-height:1.7; color:var(--dark); background:var(--cream); }
+header { text-align:center; padding:2rem 1rem 1.5rem; background:var(--white); }
+.logo { width:70%; max-width:18rem; margin:0 auto 1rem; border-radius:.75rem; }
+header h1 { font-size:2.4rem; line-height:1.2; color:var(--brown); letter-spacing:.03em; }
+.tagline { margin-top:.4rem; color:var(--pink); font-size:1.1rem; font-style:italic; }
+header hr, body > hr { border:0; border-top:.15rem solid var(--light-pink); margin:1.5rem auto 0; width:90%; max-width:75rem; }
+.navbar { position:sticky; top:0; z-index:10; background:var(--brown); box-shadow:var(--shadow); }
+.navbar ul { list-style:none; max-width:75rem; margin:0 auto; display:flex; justify-content:center; flex-wrap:wrap; }
+.navbar a { display:block; color:var(--white); text-decoration:none; padding:.9rem 1.25rem; font-weight:700; transition:background-color .2s,color .2s; }
+.navbar a:hover,.navbar a:focus { background:var(--pink); color:var(--white); }
+.navbar a:active { background:var(--gold); }
+main { width:92%; max-width:75rem; margin:2rem auto; }
+section { background:var(--white); border:1px solid var(--border); border-radius:1rem; padding:2rem; box-shadow:var(--shadow); }
+h2 { color:var(--brown); font-size:2rem; line-height:1.3; margin-bottom:1rem; }
+h3 { color:var(--brown); font-size:1.35rem; line-height:1.4; margin:1.8rem 0 .6rem; }
+p { margin-bottom:1rem; }
+ul,ol { margin:0 0 1rem 1.5rem; } li { margin-bottom:.45rem; }
+main a { color:#9b4d4d; font-weight:700; } main a:hover,main a:focus { text-decoration-thickness:.15rem; }
+.hero-text { max-width:52rem; margin-bottom:1.5rem; }
+.content-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; margin-top:1.5rem; }
+.card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; margin-top:1.5rem; }
+.card { border:1px solid var(--border); border-radius:.85rem; padding:1.25rem; background:#fffaf6; box-shadow:0 .3rem .8rem rgba(91,52,38,.08); transition:transform .2s,box-shadow .2s; }
+.card:hover { transform:translateY(-.2rem); box-shadow:var(--shadow); }
+.card img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:.65rem; margin-bottom:1rem; }
+.card h3 { margin-top:0; }
+.feature-image { width:100%; max-width:26rem; margin:0 auto 1.5rem; border-radius:.8rem; box-shadow:var(--shadow); }
+.price { font-weight:700; color:#9b4d4d; font-size:1.1rem; }
+.button-link,button,input[type=submit],input[type=reset] { display:inline-block; border:0; border-radius:.5rem; background:var(--pink); color:var(--white); padding:.75rem 1.1rem; font-weight:700; text-decoration:none; cursor:pointer; transition:background-color .2s,transform .2s; }
+.button-link:hover,button:hover,input[type=submit]:hover,input[type=reset]:hover,.button-link:focus,button:focus,input[type=submit]:focus,input[type=reset]:focus { background:var(--brown); color:var(--white); transform:translateY(-.1rem); }
+form { max-width:52rem; margin:1rem auto 2rem; background:#fffaf6; border:1px solid var(--border); border-radius:.85rem; padding:1.5rem; }
+label { display:inline-block; margin-bottom:.35rem; font-weight:700; }
+input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea { width:100%; padding:.75rem; border:1px solid #cdb9a8; border-radius:.45rem; background:var(--white); color:var(--dark); }
+input:focus,select:focus,textarea:focus { outline:.15rem solid var(--pink); border-color:var(--brown); }
+input[type=radio],input[type=checkbox] { accent-color:var(--pink); }
+.form-actions { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+.float-image { float:left; width:40%; max-width:20rem; margin:0 1.5rem 1rem 0; border-radius:.75rem; }
+.clearfix::after { content:""; display:table; clear:both; }
+.footer { text-align:center; background:var(--brown); color:var(--white); padding:2rem 1rem; margin-top:2rem; }
+.footer p { margin-bottom:.4rem; } .footer a { color:var(--white); }
+@media (max-width:64rem) { header h1{font-size:2.1rem;} .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .content-grid{grid-template-columns:1fr;} section{padding:1.5rem;} }
+@media (max-width:45rem) { html{font-size:15px;} header{padding:1.5rem .75rem;} header h1{font-size:1.8rem;} .tagline{font-size:1rem;} .navbar{position:static;} .navbar ul{flex-direction:column;align-items:stretch;} .navbar a{text-align:center;border-bottom:1px solid rgba(255,255,255,.15);padding:.75rem;} main{width:94%;margin:1rem auto;} section{padding:1rem;border-radius:.7rem;} h2{font-size:1.55rem;} h3{font-size:1.2rem;} .card-grid{grid-template-columns:1fr;} .float-image{float:none;width:100%;margin:0 auto 1rem;} .form-actions{flex-direction:column;} .form-actions input{width:100%;} }
+
+/* Part 2 breakpoint refinement */
